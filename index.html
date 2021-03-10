@@ -1,1 +1,44 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dissertation User Trial</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<script src="index.js"></script>
+
+<h1>Dissertation User Trial</h1>
+
+<h4>Introduction</h4>
+
+<p>Welcome to the product trial section of this dissertation user trial. In this section you will be asked to trial the
+prototype of the authentication system and provide some feedback via a survey. </p>
+
+<p>In order to continue to the trial, please enter the anonymous ID which was sent to you within the email containing
+    this link.</p>
+
+<form id="UserValidation" aria-label="User Login Form" >
+    <div class = "Form-body">
+        <label for="userid" class="userid_label"> User ID: </label>
+        <input type="text"
+               name="userid"
+               id="userid"
+               aria-required="true"
+               aria-label="Enter UserID"
+               aria-invalid="False"/>
+    </div>
+    <p
+            aria-live="polite"
+            role="alert"
+            aria-atomic="true"
+            id="errors"
+            class="form_alert"
+    >
+    </p>
+    <div class="Form-body">
+        <input type="submit" value="Continue!">
+    </div>
+</form>
+</body>
+</html>
