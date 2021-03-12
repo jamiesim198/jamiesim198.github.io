@@ -20,7 +20,7 @@ window.onload = function() {
     }
 
     function finish(){
-        window.location = "auth"
+        window.location = "auth.html"
     }
 }
 

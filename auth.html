@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dissertation User Trial</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+<h1>Dissertation User Trial</h1>
+<script src="auth.js"></script>
+
+<p>This is the training stage of the trial. In this page you are met with 36 squares in a 6 by 6 grid. The grid is
+    labelled in the same way as a spreadsheet or battleships board, with the rows being labelled A through F and Columns
+    1 to 6. The purpose of this test is to get used to the shape of the grid and how it is possible to move around
+    within the grid.</p>
+
+<p>Press the start button and use the directions on your keyboard to move around the grid. Once you are satisfied with
+    what you have learned, press the finish button to continue.</p>
+
+<button class="button" id = "startButton" aria-label="Start Button">Start</button>
+<button class="button" id = "finishButton" aria-label="Finish Button">Finish</button>
+
+<div aria-label="Grid" class="wrapper">
+    <ul class="row1">
+        <li class="square" id="A1"></li>
+        <li class="square" id="A2"></li>
+        <li class="square" id="A3"></li>
+        <li class="square" id="A4"></li>
+        <li class="square" id="A5"></li>
+        <li class="square" id="A6"></li>
+    </ul>
+    <ul class="row1">
+        <li class="square" id="B1"></li>
+        <li class="square" id="B2"></li>
+        <li class="square" id="B3"></li>
+        <li class="square" id="B4"></li>
+        <li class="square" id="B5"></li>
+        <li class="square" id="B6"></li>
+    </ul>
+    <ul class="row1">
+        <li class="square" id="C1"></li>
+        <li class="square" id="C2"></li>
+        <li class="square" id="C3"></li>
+        <li class="square" id="C4"></li>
+        <li class="square" id="C5"></li>
+        <li class="square" id="C6"></li>
+    </ul>
+    <ul class="row1">
+        <li class="square" id="D1"></li>
+        <li class="square" id="D2"></li>
+        <li class="square" id="D3"></li>
+        <li class="square" id="D4"></li>
+        <li class="square" id="D5"></li>
+        <li class="square" id="D6"></li>
+    </ul>
+    <ul class="row1">
+        <li class="square" id="E1"></li>
+        <li class="square" id="E2"></li>
+        <li class="square" id="E3"></li>
+        <li class="square" id="E4"></li>
+        <li class="square" id="E5"></li>
+        <li class="square" id="E6"></li>
+    </ul>
+    <ul class="row1">
+        <li class="square" id="F1"></li>
+        <li class="square" id="F2"></li>
+        <li class="square" id="F3"></li>
+        <li class="square" id="F4"></li>
+        <li class="square" id="F5"></li>
+        <li class="square" id="F6"></li>
+    </ul>
+</div>
+<script>refresh();</script>
+<p class="SR-update" id="SR-update" aria-live="assertive" aria-relevant="additions">A1</p>
+</body>
+</html>
