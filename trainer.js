@@ -20,16 +20,19 @@ window.onload = function() {
     }
 
     function finish(){
-        window.location = "auth"
+        window.location = "auth.html"
     }
 }
 
 function update_position(row, column){
+    last_cell = current_cell
     let alpha = ["A", "B", "C", "D", "E", "F"]
     let alpha_col = alpha[column-1]
-    document.getElementById(current_cell).style.background = "blue";
     current_cell = alpha_col + row.toString()
-    document.getElementById(current_cell).style.background = "aqua";
+    if (vis === true) {
+        document.getElementById(last_cell).style.background = "blue";
+        document.getElementById(current_cell).style.background = "aqua";
+    }
     if (sr === true) {
         let p = document.getElementById("SR-update")
         let add = document.createTextNode(" " + current_cell)
@@ -82,6 +85,14 @@ function refresh() {
                     else{
                         sr = true
                     }
+                    break;
+                case "KeyN":
+                    if (vis === true){
+                        vis = false
+                    }
+                    else{
+                        vis = true
+                    }
             }
             update_position(row, column)
             refresh()
@@ -90,6 +101,6 @@ function refresh() {
             event.stopPropagation();}, true);
     }
     else{
-        document.getElementById("A1").style.background = "blue";
+        document.getElementById("A1").style.background = "aqua";
     }
 }
