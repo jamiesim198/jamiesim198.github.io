@@ -13,12 +13,14 @@
 create a password of your own. In this page the same keyboard inputs apply, you can use M to toggle mute for the
 grid reading, use N to toggle the graphics on screen and R to reset your position in the grid.</p>
 
-<p>Your password will be the combination of keys you input. You must complete 8 movements and you may begin in any grid
-square you chose, this must be entered as a letter, representing your starting column, followed by a number, representing
-the row which you wish to begin. These movements can be in any direction and cover any squares you wish. However please
-be aware that the password you create is being stored in a way which is visible to myself, so please avoid using any
-pattern you would consider using yourself. When you are ready to continue, enter a starting cell and click start to
-begin </p>
+<p>Your password will be the combination of keys you input. You must complete 8 movements, which will cover 9 grid squares
+    including your original one. You may begin in any grid square you chose, this must be entered in the text box below
+    as a letter, representing your starting column, followed by a number, representing the row which you wish to begin.
+    These movements can be in any direction and cover any squares you wish. However please be aware that the password
+    you create is being stored in a way which is visible to myself, so please avoid using any pattern you would consider
+    using yourself. When you are ready to continue, enter a starting cell below and click start to begin. When you have
+    completed your password you will no longer be able to continue moving. When you are done, click the finish button
+    to store your password and then click start again to attempt to re-enter. </p>
 
 
 <form id="Cell_entry" aria-label="Enter Starting Cell" >
@@ -39,11 +41,9 @@ begin </p>
             class="form_alert"
     >
     </p>
-    <div class="Form-body">
-        <input type="submit" value="Start!" aria-label="Start Button">
-    </div>
 </form>
 
+<button class="button" id = "startButton" aria-label="Start Button">Start</button>
 <button class="button" id = "finishButton" aria-label="Finish Button">Finish</button>
 
 <div aria-label="Grid" class="wrapper" id="Grid">
@@ -96,6 +96,15 @@ begin </p>
         <li class="square" id="F6"></li>
     </ul>
 </div>
+<p
+        aria-live="polite"
+        role="alert"
+        aria-atomic="true"
+        id="passcode_errors"
+        class="form_alert"
+        aria-relevant="additions"
+>
+</p>
 <script>refresh();</script>
 <p class="SR-update" id="SR-update" aria-live="assertive" aria-relevant="additions">A1</p>
 </body>
