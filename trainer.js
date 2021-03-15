@@ -4,6 +4,7 @@ let row = 1
 let column = 1
 let sr = true
 let vis = true
+let traversed = ["A1"]
 
 window.onload = function() {
     document.getElementById("startButton").onclick = function () {
@@ -25,10 +26,12 @@ window.onload = function() {
 }
 
 function update_position(row, column){
-    last_cell = current_cell
+    let last_cell = current_cell
     let alpha = ["A", "B", "C", "D", "E", "F"]
     let alpha_col = alpha[column-1]
     current_cell = alpha_col + row.toString()
+    traversed.push(current_cell)
+    console.log(traversed)
     if (vis === true) {
         document.getElementById(last_cell).style.background = "blue";
         document.getElementById(current_cell).style.background = "aqua";
@@ -38,6 +41,20 @@ function update_position(row, column){
         let add = document.createTextNode(" " + current_cell)
         p.append(add)
     }
+}
+
+function reset(){
+    row = 1
+    column = 1
+    current_cell = "A1"
+    document.getElementById("SR-update").innerText = ""
+    var i;
+    for (i = 0; i < traversed.length; i++) {
+        let traversed_cell = traversed[i];
+        document.getElementById(traversed_cell).style.background = "#ccc";
+    }
+    traversed = []
+
 }
 
 function refresh() {
@@ -93,6 +110,10 @@ function refresh() {
                     else{
                         vis = true
                     }
+                    break;
+                case "KeyR":
+                    reset()
+                    break;
             }
             update_position(row, column)
             refresh()

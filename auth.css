@@ -14,10 +14,20 @@ body{
     margin-top:3em;
     display:block;
 }
+.Form-body{
+    padding: 10px;
+}
 
 button{
     margin-top: 5em;
     margin-left: 16%;
+    width: 5em;
+    height: 3em;
+}
+
+input[type="submit"]{
+    margin-top: 5em;
+    margin-left: 5%;
     width: 5em;
     height: 3em;
 }

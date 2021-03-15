@@ -9,18 +9,44 @@
 <h1>Dissertation User Trial</h1>
 <script src="auth.js"></script>
 
-<p>This is the training stage of the trial. In this page you are met with 36 squares in a 6 by 6 grid. The grid is
-    labelled in the same way as a spreadsheet or battleships board, with the rows being labelled A through F and Columns
-    1 to 6. The purpose of this test is to get used to the shape of the grid and how it is possible to move around
-    within the grid.</p>
+<p>Now that you have had the chance to get to know the grid and how the co-ordinate system, you have a chance to
+create a password of your own. In this page the same keyboard inputs apply, you can use M to toggle mute for the
+grid reading, use N to toggle the graphics on screen and R to reset your position in the grid.</p>
 
-<p>Press the start button and use the directions on your keyboard to move around the grid. Once you are satisfied with
-    what you have learned, press the finish button to continue.</p>
+<p>Your password will be the combination of keys you input. You must complete 8 movements and you may begin in any grid
+square you chose, this must be entered as a letter, representing your starting column, followed by a number, representing
+the row which you wish to begin. These movements can be in any direction and cover any squares you wish. However please
+be aware that the password you create is being stored in a way which is visible to myself, so please avoid using any
+pattern you would consider using yourself. When you are ready to continue, enter a starting cell and click start to
+begin </p>
 
-<button class="button" id = "startButton" aria-label="Start Button">Start</button>
+
+<form id="Cell_entry" aria-label="Enter Starting Cell" >
+    <div class = "Form-body">
+        <label for="start_cell" class="userid_label"> Starting cell: </label>
+        <input type="text"
+               name="start_cell"
+               id="start_cell"
+               aria-required="true"
+               aria-label="Enter a cell"
+               aria-invalid="False"/>
+    </div>
+    <p
+            aria-live="polite"
+            role="alert"
+            aria-atomic="true"
+            id="errors"
+            class="form_alert"
+    >
+    </p>
+    <div class="Form-body">
+        <input type="submit" value="Start!" aria-label="Start Button">
+    </div>
+</form>
+
 <button class="button" id = "finishButton" aria-label="Finish Button">Finish</button>
 
-<div aria-label="Grid" class="wrapper">
+<div aria-label="Grid" class="wrapper" id="Grid">
     <ul class="row1">
         <li class="square" id="A1"></li>
         <li class="square" id="A2"></li>
