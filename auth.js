@@ -113,7 +113,7 @@ function finish(){
     }
     else {
         if (complete === true) {
-            document.getElementById("passcode_errors").innerHTML = "Password complete, you have returned to"
+            document.getElementById("passcode_errors").innerHTML = "Password complete, you have returned to "
                 + cell + ". Please attempt to re-enter your password and click the finish button when you are done"
             set_passcode = passcode
             reset()
