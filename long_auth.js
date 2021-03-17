@@ -63,7 +63,7 @@ function update_position(row, column){
     let alpha_col = alpha[column-1]
     current_cell = alpha_col + row.toString()
     passcode.push(current_cell)
-    if (passcode.length === 6){
+    if (passcode.length === 9){
         complete = true;
     }
     if (vis === true) {
@@ -110,7 +110,7 @@ function passcode_check(){
         }
         else{
             document.getElementById("passcode_errors").innerHTML = "You have failed to replicate your password"+
-                "3 times, you can create a new passcode and start again by refreshing the page"
+                " 3 times, you can create a new passcode and start again by refreshing the page"
         }
     }
 }

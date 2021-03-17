@@ -1,0 +1,56 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body{
+    width: 100%;
+}
+
+.wrapper {
+    margin-left:20%;
+    padding: 10px;
+    width: 30%;
+    margin-top:3em;
+    display:block;
+}
+.Form-body{
+    padding: 10px;
+}
+
+button{
+    margin-top: 5em;
+    margin-left: 16%;
+    width: 5em;
+    height: 3em;
+}
+
+ul {
+    list-style:none;
+    display:inline-block;
+}
+
+.square,
+ul li {
+    width:3em;
+    height:3em;
+    margin:5px;
+}
+
+.square {
+    background:#ccc;
+}
+
+.body{
+    background: aliceblue;
+}
+
+.SR-update{
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+}
