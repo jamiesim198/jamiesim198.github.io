@@ -13,14 +13,17 @@
 create a password of your own. In this page the same keyboard inputs apply, W A S and D to move you can use M to toggle
     mute for the grid cell reading, use N to toggle the graphics on screen and R to reset your position in the grid.</p>
 
-<p>Your password will be the combination of keys you input. You must complete 5 movements, which will cover 6 grid squares
-    including your original one. You may begin in any grid square you chose, this must be entered in the text box below
+<p>Your password will consist of the combination of keys you input. </p>
+<p> You must complete 5 movements, which will cover 6 grid squares including your original one. </p>
+<p> You may begin in any grid square you chose, this must be entered in the text box below
     as a letter, representing your starting column, followed by a number, representing the row which you wish to begin.
-    These movements can be in any direction and cover any squares you wish. However please be aware that the password
-    you create is being stored in a way which is visible to myself, so please avoid using any pattern you would consider
-    using yourself. When you are ready to continue, enter a starting cell below and click start to begin. When you have
+an example might be F6 for the bottom right position or A3 for the third down cell in the leftmost column.</p>
+<p> These movements can be in any direction and cover any squares you wish. </p>
+<p> When you are ready to continue, enter a starting cell below and click start to begin. </p>
+<p> once you have
     completed your password you will no longer be able to continue moving. When you are done, click the finish button
-    to store your password and then click start again to attempt to re-enter. </p>
+    to store your password and then attempt to re enter the passcode. Click finish when you beleive you have entered
+    the correct passcode to continue. </p>
 
 
 <form id="Cell_entry" aria-label="Enter Starting Cell" onsubmit="return formVal();">
@@ -102,7 +105,7 @@ create a password of your own. In this page the same keyboard inputs apply, W A 
         aria-atomic="true"
         id="passcode_errors"
         class="form_alert"
-        aria-relevant="additions"
+        aria-relevant="all"
 >
 </p>
 <script>refresh();</script>

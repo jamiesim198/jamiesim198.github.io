@@ -13,7 +13,8 @@
     moving through the grid. You begin in the grid square A1 and the page will allocate a grid square to move to.
 This page is entirely for you to practice getting to a random grid square, use a screen reader to track your position and
 when you are happy, press finish to continue.</p>
-<p>Press R at any time to reset the grid and allocate a new target square.</p>
+<p>Press R at any time to reset the grid and allocate a new target square. The new location will be recorded as a status
+update. </p>
 
 
 <button class="button" id = "startButton" aria-label="Start Button">Start</button>
@@ -70,9 +71,9 @@ when you are happy, press finish to continue.</p>
     </ul>
 </div>
 <p
-        aria-live="polite"
+        aria-live="assertive"
         role="alert"
-        aria-atomic="true"
+        aria-atomic="false"
         id="passcode_errors"
         class="form_alert"
         aria-relevant="additions"

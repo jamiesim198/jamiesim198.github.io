@@ -93,7 +93,7 @@ function passcode_check(){
         equal = false
     }
     if(equal === true){
-        window.location = "final_success.html"
+        window.location = "final.html"
     }
     else{
         if (passcode.length === 1) {

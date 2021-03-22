@@ -60,7 +60,8 @@ function reset(){
     }
     traversed = []
     let pos = validcells[Math.floor(Math.random() * validcells.length)]
-    document.getElementById("passcode_errors").innerHTML = "Move to " + pos
+    document.getElementById("passcode_errors").innerHTML = document.getElementById("passcode_errors").innerHTML
+    + " Move to " + pos
 
 }
 
