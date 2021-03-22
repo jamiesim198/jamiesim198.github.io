@@ -6,6 +6,9 @@ let sr = true
 let vis = true
 let traversed = ["A1"]
 
+let validcells = ["A1","A2","A3","A4","A5","A6","B1","B2","B3","B4","B5","B6","C1","C2","C3","C4","C5","C6","D1","D2","D3"
+    ,"D4","D5","D6","E1","E2","E3","E4","E5","E6","F1","F2","F3","F4","F5","F6"]
+
 window.onload = function() {
     document.getElementById("startButton").onclick = function () {
         traverse()
@@ -17,11 +20,13 @@ window.onload = function() {
 
     function traverse() {
         traverse_code = true
+        let pos = validcells[Math.floor(Math.random() * validcells.length)]
+        document.getElementById("passcode_errors").innerHTML = "Move to " + pos
         refresh()
     }
 
     function finish(){
-        window.location = "trainer2.html"
+        window.location = "auth.html"
     }
 }
 
@@ -48,12 +53,14 @@ function reset(){
     column = 1
     current_cell = "A1"
     document.getElementById("SR-update").innerText = ""
-    var i;
+    let i;
     for (i = 0; i < traversed.length; i++) {
         let traversed_cell = traversed[i];
         document.getElementById(traversed_cell).style.background = "#ccc";
     }
     traversed = []
+    let pos = validcells[Math.floor(Math.random() * validcells.length)]
+    document.getElementById("passcode_errors").innerHTML = "Move to " + pos
 
 }
 

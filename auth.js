@@ -229,3 +229,7 @@ function refresh() {
             event.stopPropagation();}, true);
     }
 }
+
+function formVal(){
+    return false;
+}

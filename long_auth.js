@@ -93,7 +93,7 @@ function passcode_check(){
         equal = false
     }
     if(equal === true){
-        window.location = "success.html"
+        window.location = "final_success.html"
     }
     else{
         if (passcode.length === 1) {
@@ -228,4 +228,8 @@ function refresh() {
             event.preventDefault()
             event.stopPropagation();}, true);
     }
+}
+
+function formVal(){
+    return false;
 }
