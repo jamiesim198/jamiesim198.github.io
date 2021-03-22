@@ -26,6 +26,6 @@ window.onload = function () {
     }
 
     function submit() {
-        window.location = "trainer2.html"
+        window.location = "trainer.html"
     }
 }
