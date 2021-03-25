@@ -33,9 +33,6 @@ function update_position(row, column){
     let alpha_col = alpha[column-1]
     current_cell = alpha_col + row.toString()
     passcode.push(current_cell)
-    if (passcode.length === 6){
-        complete = true;
-    }
     if (vis === true) {
         document.getElementById(last_cell).style.background = "blue";
         document.getElementById(current_cell).style.background = "aqua";
@@ -44,6 +41,10 @@ function update_position(row, column){
         let p = document.getElementById("SR-update")
         let add = document.createTextNode(" " + current_cell)
         p.append(add)
+    }
+    if (passcode.length === 6){
+        complete = true;
+        document.getElementById("passcode_errors").innerHTML = "Passcode complete"
     }
     move = false
 }
