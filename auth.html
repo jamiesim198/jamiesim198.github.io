@@ -15,38 +15,11 @@ create a password of your own. In this page the same keyboard inputs apply, W A 
 
 <p>Your password will consist of the combination of keys you input. </p>
 <p> You must complete 5 movements, which will cover 6 grid squares including your original one. </p>
-<p> You may begin in any grid square you chose, this must be entered in the text box below
-    as a letter, representing your starting column, followed by a number, representing the row which you wish to begin.
-an example might be F6 for the bottom right position or A3 for the third down cell in the leftmost column.</p>
 <p> These movements can be in any direction and cover any squares you wish. </p>
-<p> When you are ready to continue, enter a starting cell below and click start to begin. </p>
-<p> once you have
-    completed your password you will no longer be able to continue moving. When you are done, click the finish button
-    to store your password and then attempt to re enter the passcode. Click finish when you beleive you have entered
+<p> When you are ready to continue, click start to begin. </p>
+<p> When you have entered a sufficient number of movements, you shouldn't be able to continue moving.
+    Click the finish button to store your password and then attempt to re enter the passcode. Click finish when you beleive you have entered
     the correct passcode to continue. </p>
-
-<p>Done</p>
-
-
-<form id="Cell_entry" aria-label="Enter Starting Cell" onsubmit="return formVal();">
-    <div class = "Form-body">
-        <label for="start_cell" class="userid_label"> Starting cell: </label>
-        <input type="text"
-               name="start_cell"
-               id="start_cell"
-               aria-required="true"
-               aria-label="Enter a cell"
-               aria-invalid="False"/>
-    </div>
-    <p
-            aria-live="polite"
-            role="alert"
-            aria-atomic="true"
-            id="errors"
-            class="form_alert"
-    >
-    </p>
-</form>
 
 <button class="button" id = "startButton" aria-label="Start Button">Start</button>
 <button class="button" id = "finishButton" aria-label="Finish Button">Finish</button>
