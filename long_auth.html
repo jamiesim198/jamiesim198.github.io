@@ -11,8 +11,29 @@
 
 <p>Now that you have had the chance to create your 5 movement passcode, we can experiment with longer passcodes.
 In this page, we are going to attempt to learn an 8 movement passcode. The longer passcodes are much more secure and
-are therefore more useful to us. This page is laid out in the same fashion as the last, press the start button
-and you should be able to enter your passcode.</p>
+are therefore more useful to us. This page is laid out in the same fashion as the last, asking for a starting cell
+before allowing you to enter the passcode.</p>
+
+
+<form id="Cell_entry" aria-label="Enter Starting Cell" onsubmit="return formVal();" >
+    <div class = "Form-body">
+        <label for="start_cell" class="userid_label"> Starting cell: </label>
+        <input type="text"
+               name="start_cell"
+               id="start_cell"
+               aria-required="true"
+               aria-label="Enter a cell"
+               aria-invalid="False"/>
+    </div>
+    <p
+            aria-live="polite"
+            role="alert"
+            aria-atomic="true"
+            id="errors"
+            class="form_alert"
+    >
+    </p>
+</form>
 
 <button class="button" id = "startButton" aria-label="Start Button">Start</button>
 <button class="button" id = "finishButton" aria-label="Finish Button">Finish</button>

@@ -4,17 +4,47 @@ let row = 1
 let column = 1
 let sr = true
 let vis = true
-let passcode = ["A1"]
+let passcode = []
 let move = false
-let cell = "A1"
+let cell = ""
 let complete = false
-let set_passcode = [""]
+let set_passcode = []
 let fail = 0
 
+let validcells = ["A1","A2","A3","A4","A5","A6","B1","B2","B3","B4","B5","B6","C1","C2","C3","C4","C5","C6","D1","D2","D3"
+    ,"D4","D5","D6","E1","E2","E3","E4","E5","E6","F1","F2","F3","F4","F5","F6"]
+
 window.onload = function() {
+    const cell_area = document.querySelector('input[name="start_cell"]')
+
+    function validate() {
+        cell = cell_area.value.toUpperCase();
+        row = parseInt(cell[1])
+        let alpha = ["A", "B", "C", "D", "E", "F"]
+        let column_a = cell[0]
+        column = (alpha.indexOf(column_a)) + 1
+        let right = validcells.includes(cell)
+        if (right === true) {
+            document.getElementById("startButton").disabled = true
+            current_cell = cell
+            passcode.push(current_cell)
+            document.getElementById(current_cell).style.background = "aqua";
+            traverse();
+        } else {
+            cell_area.setAttribute("aria-invalid", "true")
+            document.getElementById("errors").innerHTML = ""
+            if (cell === "") {
+                document.getElementById("errors").innerHTML = "Enter a starting cell"
+            }
+            else {
+                document.getElementById("errors").innerHTML = "Invalid starting cell, must be in the form XY " +
+                    "where X is a letter from A to F and Y is a number 1 to 6"
+            }
+        }
+    }
 
     document.getElementById("startButton").onclick = function() {
-        traverse()
+        validate()
     }
 
     document.getElementById("finishButton").onclick = function() {
@@ -33,6 +63,9 @@ function update_position(row, column){
     let alpha_col = alpha[column-1]
     current_cell = alpha_col + row.toString()
     passcode.push(current_cell)
+    if (passcode.length === 6){
+        complete = true;
+    }
     if (vis === true) {
         document.getElementById(last_cell).style.background = "blue";
         document.getElementById(current_cell).style.background = "aqua";
@@ -41,10 +74,6 @@ function update_position(row, column){
         let p = document.getElementById("SR-update")
         let add = document.createTextNode(" " + current_cell)
         p.append(add)
-    }
-    if (passcode.length === 6){
-        complete = true;
-        document.getElementById("passcode_errors").innerHTML = "Passcode complete"
     }
     move = false
 }
@@ -81,7 +110,7 @@ function passcode_check(){
         }
         else{
             document.getElementById("passcode_errors").innerHTML = "You have failed to replicate your password"+
-                " 3 times, you can create a new passcode and start again by refreshing the page"
+                "3 times, you can create a new passcode and start again by refreshing the page"
         }
     }
 }
@@ -121,7 +150,6 @@ function reset(){
     }
     passcode = [current_cell]
     document.getElementById(current_cell).style.background = "aqua"
-    complete = false
 }
 
 function refresh() {
