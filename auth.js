@@ -28,7 +28,7 @@ window.onload = function() {
             document.getElementById("startButton").disabled = true
             current_cell = cell
             passcode.push(current_cell)
-            document.getElementById(current_cell).style.background = "aqua";
+            document.getElementById(current_cell).style.background = "#001885";
             traverse();
         } else {
             cell_area.setAttribute("aria-invalid", "true")
@@ -67,8 +67,8 @@ function update_position(row, column){
         complete = true;
     }
     if (vis === true) {
-        document.getElementById(last_cell).style.background = "blue";
-        document.getElementById(current_cell).style.background = "aqua";
+        document.getElementById(last_cell).style.background = "black";
+        document.getElementById(current_cell).style.background = "#001885";
     }
     if (sr === true) {
         let p = document.getElementById("SR-update")
@@ -149,7 +149,7 @@ function reset(){
         document.getElementById(traversed_cell).style.background = "#ccc";
     }
     passcode = [current_cell]
-    document.getElementById(current_cell).style.background = "aqua"
+    document.getElementById(current_cell).style.background = "#001885"
 }
 
 function refresh() {

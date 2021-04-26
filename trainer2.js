@@ -38,8 +38,8 @@ function update_position(row, column){
     traversed.push(current_cell)
     console.log(traversed)
     if (vis === true) {
-        document.getElementById(last_cell).style.background = "blue";
-        document.getElementById(current_cell).style.background = "aqua";
+        document.getElementById(last_cell).style.background = "black";
+        document.getElementById(current_cell).style.background = "#001885";
     }
     if (sr === true) {
         let p = document.getElementById("SR-update")
@@ -130,6 +130,6 @@ function refresh() {
             event.stopPropagation();}, true);
     }
     else{
-        document.getElementById("A1").style.background = "aqua";
+        document.getElementById("A1").style.background = "#001885";
     }
 }
